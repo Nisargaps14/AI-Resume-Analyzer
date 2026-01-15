@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Resume Template Preview</title>
+    <style>
+        body {
+            font-family: 'Amazon Ember', 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f7f8fa;
+            color: #161e22;
+        }
+        .resume {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ff9900;
+            padding-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #161e22;
+            margin: 0;
+        }
+        .contact {
+            font-size: 14px;
+            color: #545b64;
+            margin: 8px 0;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff9900;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: #ff9900;
+            border-radius: 2px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background: #fff3e0;
+            color: #ff9900;
+            border: 1px solid #ff9900;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        .job-title {
+            font-weight: bold;
+            color: #161e22;
+            font-size: 16px;
+        }
+        .company {
+            color: #545b64;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .date {
+            float: right;
+            color: #545b64;
+            font-size: 13px;
+            background: #f0f2f5;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+        .description {
+            margin: 15px 0;
+            color: #3d4650;
+            line-height: 1.6;
+        }
+        .metric {
+            background: #f0f2f5;
+            border-left: 4px solid #ff9900;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .metric strong {
+            color: #ff9900;
+        }
+        .leadership {
+            background: #eaf6ff;
+            border-left: 4px solid #0073bb;
+        }
+        .leadership strong {
+            color: #0073bb;
+        }
+        .customer {
+            background: #e8f5e8;
+            border-left: 4px solid #00a862;
+        }
+        .customer strong {
+            color: #00a862;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1 class="name">Michael Johnson</h1>
+            <p class="contact">📧 michael.johnson@email.com | 📱 +1-234-567-8900 | 💼 linkedin.com/in/michaeljohnson | 🌐 github.com/michaeljohnson</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="metric">
+                <strong>Customer-Obsessed Full Stack Developer</strong> with 5+ years of experience building scalable e-commerce solutions and AWS cloud infrastructure. Passionate about delivering exceptional customer experiences through innovative technology solutions. Committed to Amazon's Leadership Principles and dedicated to continuous learning and improvement.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills">
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Distributed Systems</span>
+                <span class="skill">MongoDB</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Kubernetes</span>
+                <span class="skill">Microservices</span>
+                <span class="skill">REST APIs</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-item">
+                <div class="job-title">Senior Full Stack Developer</div>
+                <div class="company">E-Commerce Solutions Ltd.</div>
+                <span class="date">2019 - Present</span>
+                <div class="description">
+                    • Led development of microservices architecture handling 2M+ transactions daily<br>
+                    • Implemented AWS cost optimization reducing infrastructure costs by 35%<br>
+                    • Improved page load times by 60% through performance optimization<br>
+                    • Mentored team of 4 developers on best practices and Amazon leadership principles<br>
+                    • Collaborated with product teams to deliver features that increased conversion by 25%
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="job-title">Full Stack Developer</div>
+                <div class="company">Digital Retail Co.</div>
+                <span class="date">2017 - 2019</span>
+                <div class="description">
+                    • Developed responsive web applications using React and Node.js<br>
+                    • Built RESTful APIs serving 500K+ concurrent users<br>
+                    • Implemented CI/CD pipelines reducing deployment time by 50%<br>
+                    • Optimized database queries improving response times by 40%<br>
+                    • Participated in agile development with 2-week sprints
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Leadership & Achievements</h2>
+            <div class="leadership metric">
+                <strong>•</strong> Led cross-functional team of 8 developers in major platform migration
+            </div>
+            <div class="leadership metric">
+                <strong>•</strong> Mentored 6 junior developers, 3 promoted to senior roles
+            </div>
+            <div class="leadership metric">
+                <strong>•</strong> Implemented innovative solutions that generated $2M+ in revenue
+            </div>
+            <div class="customer metric">
+                <strong>•</strong> Improved customer satisfaction scores from 85% to 95%
+            </div>
+            <div class="customer metric">
+                <strong>•</strong> Reduced customer support tickets by 40% through self-service features
+            </div>
+            <div class="customer metric">
+                <strong>•</strong> Launched customer-facing features used by 1M+ users
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">AWS Certifications</h2>
+            <div class="skills">
+                <span class="skill">AWS Solutions Architect</span>
+                <span class="skill">AWS Developer Associate</span>
+                <span class="skill">AWS Certified Cloud Practitioner</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-item">
+                <div class="job-title">Bachelor of Science in Computer Science</div>
+                <div class="company">University of Technology</div>
+                <span class="date">2013 - 2017</span>
+                <div class="description">
+                    <strong>GPA:</strong> 3.7/4.0 | <strong>Activities:</strong> Computer Science Club, Hackathon Winner
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
