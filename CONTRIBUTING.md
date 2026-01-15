@@ -1,13 +1,394 @@
-# Contributing to AI Resume Analyzer
+# 🤝 Contributing to AI-Powered Resume Analyzer
 
-First off, thank you for considering contributing to AI Resume Analyzer! 🎉
+Thank you for your interest in contributing to this project! This document provides guidelines and best practices for contributing.
 
-This project is a portfolio piece that demonstrates AI/NLP concepts, but we welcome improvements, bug fixes, and new features from the community.
+## 🚀 Quick Start
 
-## Table of Contents
-1. [Code of Conduct](#code-of-conduct)
-2. [Getting Started](#getting-started)
-3. [How to Contribute](#how-to-contribute)
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Make your changes**
+4. **Test thoroughly**
+5. **Submit a pull request**
+
+## 📋 Development Guidelines
+
+### 🎯 Code Style
+
+- **TypeScript** - Use TypeScript for all new code
+- **Components** - Follow React functional component patterns
+- **Tailwind CSS** - Use utility classes for styling
+- **File Naming** - Use PascalCase for components, camelCase for utilities
+- **Imports** - Group imports at the top of files
+
+### 🏗️ Project Structure
+
+```
+src/
+├── app/
+│   ├── components/          # React components
+│   │   ├── ui/             # Reusable UI components
+│   │   └── *.tsx           # Feature components
+│   ├── utils/              # Utility functions
+│   │   ├── *.ts            # Helper functions
+│   │   └── *.tsx           # React hooks
+│   └── styles/             # CSS files
+├── public/                  # Static assets
+│   └── templates/         # Resume templates
+└── docs/                   # Documentation
+```
+
+### 🔧 Development Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+
+# Lint code
+npm run lint
+```
+
+## 🎨 Adding Features
+
+### New Components
+
+1. **Create component file** in `src/app/components/`
+2. **Export component** with proper TypeScript types
+3. **Add to index** if it's a utility
+4. **Write tests** for new functionality
+5. **Update documentation**
+
+Example component structure:
+```tsx
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+
+interface NewComponentProps {
+  title: string;
+  data: any[];
+}
+
+export function NewComponent({ title, data }: NewComponentProps) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {/* Component content */}
+      </CardContent>
+    </Card>
+  );
+}
+
+export default NewComponent;
+```
+
+### Adding Companies
+
+1. **Update companyData.ts** with new company information
+2. **Add resume template** in `public/templates/`
+3. **Create preview HTML** for template
+4. **Test integration** with job portal
+
+Company data structure:
+```typescript
+export const COMPANY_DATA: Record<string, CompanyData> = {
+  'NewCompany': {
+    name: 'NewCompany',
+    logo: '🏢',
+    industry: 'Technology',
+    description: 'Company description',
+    resumeFormat: {
+      template: 'newcompany-resume.docx',
+      downloadUrl: '/templates/newcompany-resume.docx',
+      previewUrl: '/templates/newcompany-preview.html',
+      guidelines: [
+        'Guideline 1',
+        'Guideline 2'
+      ]
+    },
+    interviewPrep: {
+      questions: ['Question 1', 'Question 2'],
+      technicalQuestions: ['Tech Question 1'],
+      behavioralQuestions: ['Behavioral Question 1'],
+      preparationTips: ['Tip 1', 'Tip 2'],
+      videoResources: ['Video 1'],
+      studyMaterials: ['Material 1']
+    },
+    culture: {
+      values: ['Value 1', 'Value 2'],
+      workStyle: 'Work style description',
+      dressCode: 'Dress code info',
+      interviewFormat: 'Interview format'
+    },
+    applicationTips: {
+      coverLetter: ['Tip 1', 'Tip 2'],
+      followUp: ['Follow-up tip'],
+      timeline: ['Timeline info'],
+      requirements: ['Requirement 1', 'Requirement 2']
+    }
+  }
+};
+```
+
+## 🧪 Testing
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+### Writing Tests
+
+- **Unit tests** for utility functions
+- **Component tests** for React components
+- **Integration tests** for API calls
+- **E2E tests** for user workflows
+
+Example test:
+```typescript
+import { render, screen } from '@testing-library/react';
+import { NewComponent } from '../NewComponent';
+
+describe('NewComponent', () => {
+  it('renders title correctly', () => {
+    render(<NewComponent title="Test Title" data={[]} />);
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
+  });
+});
+```
+
+## 📝 Documentation
+
+### Updating README
+
+- **Add new features** to Features section
+- **Update installation** instructions if needed
+- **Document new APIs** or dependencies
+- **Add screenshots** for UI changes
+
+### Code Comments
+
+- **JSDoc** for function documentation
+- **Inline comments** for complex logic
+- **TODO comments** for future improvements
+
+## 🎨 UI/UX Guidelines
+
+### Design Principles
+
+- **Consistent** - Follow existing design patterns
+- **Responsive** - Mobile-first approach
+- **Accessible** - WCAG 2.1 compliance
+- **User-friendly** - Clear error messages and loading states
+
+### Color Usage
+
+Use CSS custom properties defined in `src/styles/branding.css`:
+```css
+.component {
+  background: var(--brand-primary);
+  color: white;
+  border-radius: var(--brand-radius-md);
+}
+```
+
+### Component Patterns
+
+- **Cards** - Use Card component for content sections
+- **Buttons** - Use Button component with variants
+- **Forms** - Use proper form validation
+- **Modals** - Use Dialog component for overlays
+
+## 🚀 Pull Request Process
+
+### Before Submitting
+
+1. **Test your changes** thoroughly
+2. **Update documentation** if needed
+3. **Rebase** with main branch if necessary
+4. **Ensure no merge conflicts**
+5. **Follow commit message** conventions
+
+### Commit Message Format
+
+```
+type(scope): brief description
+
+[optional body]
+
+[optional footer]
+```
+
+Types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation update
+- `style`: Code style changes
+- `refactor`: Code refactoring
+- `test`: Adding tests
+- `chore`: Maintenance tasks
+
+Examples:
+```
+feat(job-portal): add company-specific resume templates
+
+fix(ats): resolve keyword extraction issue
+
+docs(readme): update installation instructions
+```
+
+### PR Template
+
+```markdown
+## 🎯 Description
+Brief description of changes made.
+
+## 🧪 Changes Made
+- [x] Change 1
+- [x] Change 2
+- [ ] Future change
+
+## 🧪 Testing
+- [x] Unit tests pass
+- [x] Integration tests pass
+- [x] Manual testing completed
+
+## 📷 Screenshots
+(If applicable)
+
+## 🔗 Related Issues
+Closes #123
+```
+
+## 🐛 Bug Reports
+
+### Reporting Issues
+
+1. **Use GitHub Issues** for bug reports
+2. **Search existing issues** first
+3. **Provide detailed information**:
+   - Browser and version
+   - Steps to reproduce
+   - Expected vs actual behavior
+   - Error messages
+   - Screenshots if applicable
+
+### Bug Report Template
+
+```markdown
+## 🐛 Bug Description
+Brief description of the bug.
+
+### 🔄 Steps to Reproduce
+1. Go to...
+2. Click on...
+3. Enter...
+4. See error...
+
+### 🎯 Expected Behavior
+What should happen.
+
+### ❌ Actual Behavior
+What actually happens.
+
+### 📷 Screenshots
+(If applicable)
+
+### 🌐 Environment
+- OS: [Windows/macOS/Linux]
+- Browser: [Chrome/Firefox/Safari]
+- Version: [v1.0.0]
+
+### 📝 Additional Context
+Any other relevant information.
+```
+
+## 💡 Feature Requests
+
+### Requesting Features
+
+1. **Check roadmap** for planned features
+2. **Use GitHub Discussions** for ideas
+3. **Provide use cases** and benefits
+4. **Consider implementation** complexity
+
+### Feature Request Template
+
+```markdown
+## 🚀 Feature Description
+Clear description of the feature.
+
+### 🎯 Problem Statement
+What problem does this solve?
+
+### 💡 Proposed Solution
+How should this be implemented?
+
+### 🎨 UI/UX Considerations
+Any design considerations.
+
+### 🔧 Technical Details
+Implementation approach or technical considerations.
+
+### 📈 Benefits
+Value this adds to the project.
+```
+
+## 🏆 Recognition
+
+### Contributors
+
+All contributors will be recognized in:
+- **README.md** - Contributors section
+- **GitHub Contributors** - Automatic recognition
+- **Release notes** - Feature attributions
+
+### Code of Conduct
+
+- **Be respectful** and professional
+- **Welcome newcomers** and help them learn
+- **Focus on what** is best for the project
+- **Assume good intentions**
+
+## 📞 Getting Help
+
+### Support Channels
+
+- **GitHub Issues** - Bug reports and feature requests
+- **GitHub Discussions** - General questions and ideas
+- **Documentation** - Check existing docs first
+
+### Contact Maintainers
+
+- **Create issue** with `question` label for general questions
+- **Use `help wanted` label for contributions needed
+- **Tag maintainers** in issues for specific questions
+
+---
+
+## 🎉 Thank You!
+
+Your contributions help make this project better for everyone. Whether you're fixing a bug, adding a feature, improving documentation, or sharing ideas, your effort is valued and appreciated!
+
+**Happy coding!** 🚀
 4. [Development Guidelines](#development-guidelines)
 5. [Pull Request Process](#pull-request-process)
 6. [Community](#community)
