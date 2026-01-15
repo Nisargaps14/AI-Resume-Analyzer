@@ -1,295 +1,187 @@
-# 🤖 AI-Powered Resume Analyzer & Interview Coach
+# 🤖 AI-Powered Resume Analyzer & Job Hiring Portal
 
-A comprehensive, production-ready web application that leverages Natural Language Processing (NLP) and Machine Learning algorithms to analyze resumes, match them with job descriptions, optimize for Applicant Tracking Systems (ATS), and provide AI-powered interview coaching.
+An intelligent resume analysis and job matching platform that helps job seekers optimize their resumes and find perfect job opportunities with company-specific insights.
 
-## 🌟 Features
+## ✨ Features
 
-### 1. **Resume Parser & Analyzer**
-- ✅ Upload resume files (PDF, DOCX, TXT)
-- ✅ Extract text using PDF.js and Mammoth.js
-- ✅ NLP-powered extraction of:
-  - Skills and technologies
-  - Education history
-  - Work experience
-  - Contact information
-  - Key achievements
+### 🎯 Resume Analysis
+- **ATS Score Optimization** - Real-time ATS compatibility scoring
+- **Keyword Analysis** - Extract and match job requirements
+- **Resume-Job Matching** - Calculate compatibility percentage
+- **Improvement Suggestions** - Personalized recommendations
 
-### 2. **Job Description Matching**
-- ✅ Compare resume against job descriptions
-- ✅ Calculate match percentage using **TF-IDF** and **Cosine Similarity**
-- ✅ Identify missing keywords
-- ✅ Highlight matched skills
-- ✅ Provide actionable recommendations
+### 💼 Job Hiring Portal
+- **Real-Time Job Listings** - Live data from multiple APIs
+- **Smart Filtering** - By experience, location, keywords
+- **Auto-Refresh** - Updates every 2 minutes
+- **Mixed Job Categories** - Both IT and non-IT positions
+- **Company Resources** - Download templates and interview prep
 
-### 3. **ATS Optimization Engine**
-- ✅ Analyze resume for ATS compatibility
-- ✅ Provide optimization score
-- ✅ Suggest improvements for better parsing
-- ✅ Recommend action verbs and formatting
-- ✅ Identify missing critical sections
+### 🏢 Company-Specific Features
+- **Resume Templates** - Download company-optimized templates
+- **Interview Preparation** - Company-specific questions and tips
+- **Culture Insights** - Work style and interview format
+- **Application Guidelines** - Tailored application advice
+- **Template Preview** - Full HTML preview of resume formats
 
-### 4. **AI Interview Coach**
-- ✅ Generate role-specific interview questions
-- ✅ Evaluate answers using AI heuristics
-- ✅ Provide detailed feedback on:
-  - Answer quality and structure
-  - Communication clarity
-  - Technical accuracy
-- ✅ Suggest better answer approaches (STAR method)
+### 📋 Interactive Components
+- **Resume Upload** - Parse and analyze resumes
+- **Live Status** - Real-time job updates
+- **Progress Tracking** - Visual match indicators
+- **Modal Interfaces** - Detailed company information
 
-## 🏗️ Technical Architecture
+## 🚀 Technology Stack
 
-### Frontend
-- **Framework**: React 18.3 with TypeScript
-- **Styling**: Tailwind CSS v4 with custom components
-- **UI Library**: Radix UI for accessible components
-- **State Management**: React Hooks
+- **Frontend**: React 18 + TypeScript
+- **Styling**: TailwindCSS + Shadcn/ui
+- **Build Tool**: Vite
+- **Icons**: Lucide React
+- **APIs**: Multiple job APIs (Remotive, RapidAPI, Adzuna)
+- **Deployment**: GitHub Pages
 
-### NLP & ML Components
-- **PDF Parsing**: PDF.js (client-side)
-- **DOCX Parsing**: Mammoth.js
-- **NLP**: Natural.js library
-- **Stopword Removal**: Stopword library
-- **Algorithms**:
-  - TF-IDF (Term Frequency-Inverse Document Frequency)
-  - Cosine Similarity for text comparison
-  - Custom keyword extraction
+## 📱 Live Demo
 
-### Key Technologies
-```
-- React 18.3
-- TypeScript
-- Tailwind CSS 4.0
-- PDF.js 5.4
-- Mammoth.js 1.11
-- Natural NLP 8.1
-- Lucide React (icons)
-```
+🌐 **[Live Demo](https://nisargaps14.github.io/AI-Resume-Analyzer/)**
 
-## 📂 Project Structure
+## 🛠️ Installation
 
-```
-src/
-├── app/
-│   ├── components/
-│   │   ├── ui/                    # Reusable UI components
-│   │   ├── ResumeUploader.tsx     # File upload component
-│   │   ├── ResumeAnalysis.tsx     # Display extracted data
-│   │   ├── JobMatcher.tsx         # Job matching interface
-│   │   ├── ATSOptimizer.tsx       # ATS optimization tools
-│   │   └── InterviewCoach.tsx     # Interview practice module
-│   ├── utils/
-│   │   ├── nlp.ts                 # NLP algorithms (TF-IDF, cosine similarity)
-│   │   ├── fileParser.ts          # PDF/DOCX parsing utilities
-│   │   └── mockAI.ts              # AI simulation functions
-│   └── App.tsx                    # Main application component
-└── ...
-```
-
-## 🚀 Installation & Setup
-
-### Prerequisites
-- Node.js 18+ or 20+
-- npm or yarn
-
-### Quick Start
-
-1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/ai-resume-analyzer.git
-cd ai-resume-analyzer
-```
+# Clone the repository
+git clone https://github.com/Nisargaps14/AI-Resume-Analyzer.git
 
-2. **Install dependencies**
-```bash
+# Navigate to project
+cd AI-Resume-Analyzer
+
+# Install dependencies
 npm install
-```
 
-3. **Run development server**
-```bash
+# Start development server
 npm run dev
 ```
 
-4. **Build for production**
-```bash
-npm run build
+## 🎯 Usage
+
+1. **Upload Resume** - Upload your resume for analysis
+2. **Browse Jobs** - Filter by experience, location, keywords
+3. **Analyze Match** - Get personalized job compatibility scores
+4. **Company Resources** - Download templates and interview prep
+5. **Apply Smart** - Use company-specific insights
+
+## 🏢 Supported Companies
+
+### Tech Giants
+- 🔷 **Microsoft** - Azure-focused templates and interview prep
+- 🔍 **Google** - Innovation and scale-oriented guidance
+- 📦 **Amazon** - Customer-obsessed application tips
+
+### IT Services
+- 💼 **TCS** - Traditional IT application format
+- 🏢 **Infosys** - Comprehensive tech preparation
+- 🌐 **Wipro** - Enterprise development focus
+
+### Additional Industries
+- ☁️ **Salesforce** - CRM and sales career guidance
+- 🏦 **HDFC Bank** - Banking and finance roles
+- 🧴 **Unilever** - Marketing and brand management
+- 🏨 **Taj Hotels** - Hospitality career paths
+- 📚 **BYJU'S** - Education and content development
+- 🏪 **Reliance Retail** - Retail and store management
+- 🏥 **Apollo Hospitals** - Healthcare administration
+- 🍽️ **Zomato** - Business development and partnerships
+
+## 📊 Features Breakdown
+
+### Resume Analysis Engine
+- **Cosine Similarity** - Advanced text matching algorithms
+- **Keyword Extraction** - NLP-powered skill identification
+- **ATS Optimization** - Real-world compatibility testing
+- **Score Visualization** - Progress bars and indicators
+
+### Job Matching System
+- **Multi-API Integration** - Real-time job aggregation
+- **Smart Filtering** - Experience level and location
+- **Duplicate Removal** - Clean, unique listings
+- **Auto-Update Manager** - Configurable refresh intervals
+
+### Company Intelligence
+- **Template Library** - Company-specific resume formats
+- **Interview Databases** - Real interview questions
+- **Culture Guides** - Work environment insights
+- **Application Tips** - Timeline and requirements
+
+## 🔧 Configuration
+
+### Environment Variables
+```env
+# API Keys (Optional - for enhanced job data)
+VITE_RAPIDAPI_KEY=your_rapidapi_key
+VITE_ADZUNA_APP_ID=your_adzuna_app_id
+VITE_ADZUNA_APP_KEY=your_adzuna_app_key
 ```
 
-The application will be available at `http://localhost:3000`
+### Auto-Update Settings
+```javascript
+// Configure refresh intervals
+const updateConfig = {
+  interval: 2 * 60 * 1000, // 2 minutes
+  retryAttempts: 3,
+  statusCallback: (status) => console.log(status)
+};
+```
 
-## 📖 Usage Guide
+## 🎨 Customization
 
-### 1. Upload Resume
-- Click the "Upload Resume" tab
-- Select your resume file (PDF, DOCX, or TXT)
-- Click "Analyze Resume"
-- Wait for NLP processing to complete
+### Branding
+- Update **logo** and **color scheme** in `src/styles/theme.css`
+- Modify **company data** in `src/app/utils/companyData.ts`
+- Customize **job sources** in `src/app/utils/jobAPI.ts`
 
-### 2. View Analysis
-- Navigate to the "Analysis" tab
-- Review extracted:
-  - Skills and technologies
-  - Education details
-  - Work experience
-  - Contact information
-
-### 3. Match with Job Description
-- Go to "Job Match" tab
-- Paste a job description
-- Click "Calculate Match Score"
-- Review:
-  - Match percentage
-  - Missing keywords
-  - Matched skills
-  - Recommendations
-
-### 4. Optimize for ATS
-- Visit the "ATS" tab
-- Check your ATS compatibility score
-- Review optimization suggestions
-- Implement recommended changes
-
-### 5. Practice Interviews
-- Open "Interview" tab
-- Select your job role
-- Generate interview questions
-- Type your answers
-- Receive AI-powered feedback
-
-## 🧪 NLP Algorithms Explained
-
-### TF-IDF (Term Frequency-Inverse Document Frequency)
-Measures word importance by considering:
-- **Term Frequency**: How often a word appears in a document
-- **Inverse Document Frequency**: How unique the word is across all documents
-
+### Adding Companies
 ```typescript
-TF-IDF = (word count / total words) × log(total docs / docs containing word)
+// Add new company data
+const newCompany: CompanyData = {
+  name: 'Your Company',
+  logo: '🏢',
+  industry: 'Technology',
+  resumeFormat: {
+    template: 'company-resume.docx',
+    downloadUrl: '/templates/company-resume.docx',
+    previewUrl: '/templates/company-preview.html',
+    guidelines: ['Custom guidelines']
+  },
+  // ... other properties
+};
 ```
 
-### Cosine Similarity
-Calculates similarity between two documents:
-1. Convert documents to TF-IDF vectors
-2. Calculate dot product of vectors
-3. Divide by product of vector magnitudes
+## 📈 Performance
 
-```typescript
-similarity = (A · B) / (||A|| × ||B||)
-```
-
-Result: 0 (no similarity) to 1 (identical documents)
-
-## 🎓 Resume Bullet Points (for Your Portfolio)
-
-Use these bullet points to describe this project on your resume:
-
-```
-TECHNICAL HIGHLIGHTS:
-
-• Developed full-stack AI-powered Resume Analyzer using React, TypeScript, and NLP libraries, 
-  processing 100+ resumes with 95% accuracy in skill extraction
-
-• Implemented TF-IDF and Cosine Similarity algorithms for job-resume matching, achieving 
-  85% correlation with manual expert evaluations
-
-• Built client-side PDF/DOCX parser using PDF.js and Mammoth.js, eliminating backend 
-  dependencies and improving response time by 70%
-
-• Created ATS optimization engine that increased resume parsing success rate by 40% through 
-  keyword analysis and formatting recommendations
-
-• Designed AI interview coach with automated answer evaluation using NLP heuristics, 
-  providing feedback on 5+ quality metrics
-
-• Architected component-based UI with Tailwind CSS and Radix UI, ensuring WCAG 2.1 
-  accessibility compliance
-```
-
-## 🔮 Future Enhancements
-
-### Phase 1 (Backend Integration)
-- [ ] Integrate OpenAI GPT-4 API for advanced answer evaluation
-- [ ] Add user authentication and resume history
-- [ ] Implement resume template generation
-- [ ] Add database for storing user data (MongoDB/PostgreSQL)
-
-### Phase 2 (Advanced Features)
-- [ ] Multi-language support
-- [ ] Resume comparison tool
-- [ ] Salary prediction based on skills
-- [ ] Industry-specific analysis
-- [ ] Chrome extension for LinkedIn profiles
-
-### Phase 3 (ML Enhancements)
-- [ ] Train custom NLP model for skill extraction
-- [ ] Implement deep learning for resume ranking
-- [ ] Add sentiment analysis for cover letters
-- [ ] Career path recommendation system
-
-## 🛠️ Technologies Deep Dive
-
-### Why These Technologies?
-
-**React + TypeScript**: Type-safe component development, excellent tooling, large ecosystem
-
-**Tailwind CSS**: Rapid UI development, consistent design system, excellent performance
-
-**PDF.js**: Mozilla's robust PDF rendering library, no backend required
-
-**Natural.js**: Comprehensive NLP toolkit with tokenization, stemming, and classification
-
-**TF-IDF**: Industry-standard algorithm for document similarity in information retrieval
+- **⚡ Fast Loading** - Optimized bundle sizes
+- **🔄 Real-Time Updates** - 2-minute refresh cycles
+- **📱 Responsive Design** - Mobile-first approach
+- **🎯 High Accuracy** - Advanced matching algorithms
 
 ## 🤝 Contributing
 
-This is a portfolio/learning project, but contributions are welcome!
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
+### Development Workflow
 1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+2. Create feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit pull request
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## 📞 Contact
 
-**Your Name**
-- Portfolio: [your-portfolio.com](https://your-portfolio.com)
-- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- GitHub: [@yourhandle](https://github.com/yourhandle)
-
-## 🙏 Acknowledgments
-
-- PDF.js by Mozilla
-- Natural NLP library contributors
-- Radix UI team
-- Tailwind CSS team
-
-## 📊 Technical Metrics
-
-- **Performance**: 
-  - Resume parsing: < 2 seconds (avg)
-  - Job matching: < 1 second
-  - Bundle size: ~500KB gzipped
-
-- **Accuracy**:
-  - Skill extraction: 90-95%
-  - Contact info extraction: 98%
-  - ATS compatibility prediction: 85%
-
-## 🎯 Use Cases
-
-1. **Job Seekers**: Optimize resumes for specific job applications
-2. **Career Coaches**: Analyze client resumes at scale
-3. **Recruiters**: Quickly assess candidate-job fit
-4. **Students**: Practice interview skills and improve resumes
-5. **Researchers**: Study resume trends and patterns
+- **Author**: Nisarga P S
+- **Email**: psnisarga1@gmail.com
+- **GitHub**: [@Nisargaps14](https://github.com/Nisargaps14)
+- **Live Demo**: [AI-Resume-Analyzer](https://nisargaps14.github.io/AI-Resume-Analyzer/)
 
 ---
 
-**Made with ❤️ for the developer community**
-
-*This project demonstrates proficiency in React, TypeScript, NLP, Machine Learning algorithms, and modern web development practices.*
+⭐ **Star this repository** if it helps you in your job search! 🚀
