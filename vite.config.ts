@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/',
+  base: '/', // Works for both GitHub Pages and custom domains
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
