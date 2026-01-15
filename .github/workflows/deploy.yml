@@ -3,7 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  paths: [ 'src' ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -34,8 +39,4 @@ jobs:
         path: './dist'
         
     - name: Deploy to GitHub Pages
-      id: deployment
       uses: actions/deploy-pages@v4
-      with:
-        artifact-name: github-pages
-        deployment-id: ${{ steps.deployment.outputs.deployment_id }}
